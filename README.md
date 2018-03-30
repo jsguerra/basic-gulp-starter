@@ -29,9 +29,8 @@ ProjectRoot/
 ├── dist/
 ├── node_modules/
 │
-├── Gruntfile.js
+├── gulpfile.js
 ├── package.json
 ├──.gitignore
-├── index.html
 └── README.md
 ```
