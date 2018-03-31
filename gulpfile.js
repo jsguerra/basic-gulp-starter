@@ -1,15 +1,16 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
-var cssnano = require('gulp-cssnano');
-var del = require('del');
-var runSequence = require('run-sequence');
-var autoprefixer = require('gulp-autoprefixer');
+// Include the necessary modules
+var gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	cssnano = require('gulp-cssnano'),
+	autoprefixer = require('gulp-autoprefixer'),
+	useref = require('gulp-useref'),
+	uglify = require('gulp-uglify'),
+	gulpIf = require('gulp-if'),
+	del = require('del'),
+	runSequence = require('run-sequence'),
+	browserSync = require('browser-sync');
 
-// Start browserSync server
+// Configure BrowserSync
 gulp.task('browserSync', function() {
 	browserSync({
 		server: {
@@ -18,7 +19,7 @@ gulp.task('browserSync', function() {
 	})
 });
 
-// Start Sass preprocessor
+// Configure Sass preprocessor and reload browers with updates
 gulp.task('sass', function(){
 	return gulp.src('app/scss/**/*.scss')
 		.pipe(sass().on('error', sass.logError)) // Using gulp-sass
@@ -32,13 +33,14 @@ gulp.task('sass', function(){
 		}))
 });
 
-// Watchers
+// Configure Watchers
 gulp.task('watch', ['browserSync', 'sass'], function() {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
+// Configure other tasks
 gulp.task('useref', function() {
 	return gulp.src('app/*.html')
 		.pipe(useref())
