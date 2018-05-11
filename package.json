@@ -27,5 +27,8 @@
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.1.5",
     "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "hoek": "^5.0.3"
   }
 }
