@@ -18,11 +18,11 @@
   },
   "homepage": "https://github.com/jsguerra/basic-gulp-starter#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.4",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
-    "gulp-cssnano": "^2.1.2",
+    "gulp-cssnano": "^2.1.3",
     "gulp-sass": "^3.2.1",
     "gulp-uglify": "^3.0.0",
     "gulp-useref": "^3.1.5",
