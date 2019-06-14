@@ -1,5 +1,5 @@
 # basic-gulp-starter
-> A basic Gulp setup to start a project
+> A basic Gulp 3 setup to start a project
 
 ### What's included?
 - Sass
